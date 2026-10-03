@@ -19,7 +19,7 @@
         rating: 4.9,
         students: 4820,
         featured: true,
-        pattern: "grid",
+        image: "assets/courses/c1.jpg",
         outcomes: ["Write semantic, accessible HTML without div-soup", "Build mobile-first layouts with Grid and Flexbox", "Ship a three-page responsive site from scratch"]
       },
       {
@@ -34,7 +34,7 @@
         rating: 4.8,
         students: 3950,
         featured: true,
-        pattern: "bars",
+        image: "assets/courses/c2.jpg",
         outcomes: ["Place anything with Grid template areas", "Align components perfectly with Flexbox", "Recreate complex layouts from screenshots"]
       },
       {
@@ -49,7 +49,7 @@
         rating: 4.9,
         students: 5210,
         featured: false,
-        pattern: "dots",
+        image: "assets/courses/c3.jpg",
         outcomes: ["Manipulate the DOM with confidence", "Manage UI state without a library", "Build tabs, accordions, filters and dialogs by hand"]
       },
       {
@@ -64,7 +64,7 @@
         rating: 4.9,
         students: 2870,
         featured: true,
-        pattern: "waves",
+        image: "https://picsum.photos/id/119/400/225",
         outcomes: ["Audit any page against WCAG 2.2 AA", "Name every interactive element for assistive tech", "Design focus and motion that respect users"]
       },
       {
@@ -79,7 +79,7 @@
         rating: 4.7,
         students: 2140,
         featured: false,
-        pattern: "grid",
+        image: "https://picsum.photos/id/2/400/225",
         outcomes: ["Architect a token-driven palette in oklch", "Organize CSS with cascade layers", "Document components others can reuse"]
       },
       {
@@ -94,7 +94,7 @@
         rating: 4.8,
         students: 1980,
         featured: false,
-        pattern: "bars",
+        image: "https://picsum.photos/id/180/400/225",
         outcomes: ["Read a Lighthouse report like a mechanic", "Eliminate layout shift at the source", "Budget performance for every new feature"]
       },
       {
@@ -109,7 +109,7 @@
         rating: 4.7,
         students: 1760,
         featured: false,
-        pattern: "waves",
+        image: "https://picsum.photos/id/366/400/225",
         outcomes: ["Hand-write clean inline SVG", "Animate with transforms and opacity only", "Build a reduced-motion-safe animation system"]
       },
       {
@@ -124,7 +124,7 @@
         rating: 4.8,
         students: 2430,
         featured: false,
-        pattern: "dots",
+        image: "https://picsum.photos/id/1/400/225",
         outcomes: ["Validate with the platform before reaching for JS", "Write error messages humans understand", "Persist form state across sessions"]
       },
       {
@@ -139,7 +139,7 @@
         rating: 5.0,
         students: 3120,
         featured: false,
-        pattern: "grid",
+        image: "https://picsum.photos/id/20/400/225",
         outcomes: ["Plan a multi-page static site end to end", "Pass your own accessibility and performance audit", "Deploy to static hosting with a custom domain"]
       }
     ]

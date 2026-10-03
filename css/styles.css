@@ -258,7 +258,7 @@
     mask-image: radial-gradient(120% 90% at 50% 20%, black 30%, transparent 100%);
     opacity: 0.5;
   }
-  .device-frames { position: absolute; inset: 0; }
+  .device-frames { position: absolute; inset: 0; display: none; }
   .device-frame { position: absolute; margin: 0; opacity: 0.5; transition: opacity 0.5s var(--ease-out); }
   .device-frame .frame {
     border: 2px solid color-mix(in oklch, var(--ink) 30%, transparent);
@@ -308,7 +308,8 @@
   .main-nav {
     position: fixed;
     left: 12px; right: 12px;
-    bottom: calc(12px + env(safe-area-inset-bottom));
+    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     border-radius: 26px;
     z-index: 61;
   }
@@ -943,4 +944,25 @@
   body.show-landmarks article::before { content: "article"; }
   body.show-landmarks aside::before { content: "aside"; }
   body.show-landmarks .site-footer::before { content: "footer"; }
+}
+
+/* Fix: .glass (in layer glass) overrides layout positioning.
+   Unlayered styles override all layers. */
+.main-nav.glass { position: fixed; }
+@media (min-width: 768px) {
+  .main-nav.glass { 
+    position: static; 
+    background: transparent; 
+    border-color: transparent; 
+    box-shadow: none; 
+    backdrop-filter: none; 
+    -webkit-backdrop-filter: none;
+  }
+  .brand-bar.glass {
+    background: transparent; 
+    border-color: transparent; 
+    box-shadow: none; 
+    backdrop-filter: none; 
+    -webkit-backdrop-filter: none;
+  }
 }

@@ -199,6 +199,9 @@
 
   /* ---------- inline SVG thumbnails (no heavy images) ---------- */
   function thumbSVG(course) {
+    if (course.image) {
+      return '<img src="' + esc(course.image) + '" alt="' + esc(course.title) + ' Thumbnail" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">';
+    }
     var p = course.pattern || "grid";
     var inner = "";
     if (p === "grid") {
