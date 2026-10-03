@@ -1,0 +1,21 @@
+# CourseHub is dependency-free: no node_modules, no build output.
+# These are here for the humans and their editors.
+
+.DS_Store
+Thumbs.db
+*.log
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local preview / packaging artefacts
+coursehub-*.zip
+dist/
+
+# The og:image PNG is generated from assets/og-cover.svg at deploy time;
+# uncomment to keep generated binaries out of the repo.
+# assets/og-cover.png

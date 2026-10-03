@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blueprint — CourseHub</title>
+  <meta name="description" content="The CourseHub design process: discovery, grayscale wireframes, semantic landmarks, the warm palette with measured contrast ratios, type specimen, interactions and audit.">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2F0EA">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1D140F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blueprint — CourseHub">
+  <meta property="og:description" content="How CourseHub was designed: discovery, wireframes, semantics, style, logic and audit.">
+  <meta property="og:image" content="assets/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blueprint — CourseHub">
+  <meta name="twitter:description" content="How CourseHub was designed: discovery, wireframes, semantics, style, logic and audit.">
+  <meta name="twitter:image" content="assets/og-cover.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("coursehub-theme");
+        if (t === "light" || t === "dark" || t === "system") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) { /* storage unavailable: fall back to system */ }
+    })();
+  </script>
+</head>
+<body data-page="blueprint">
+  <div class="nav-sentinel" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blueprint-grid"></div>
+    <div class="device-frames">
+      <figure class="device-frame" data-device="mobile">
+        <div class="frame frame-phone"></div>
+        <figcaption class="device-label">Mobile — below 768px</figcaption>
+      </figure>
+      <figure class="device-frame" data-device="tablet">
+        <div class="frame frame-tablet"></div>
+        <figcaption class="device-label">Tablet — 768px and up</figcaption>
+      </figure>
+      <figure class="device-frame" data-device="desktop">
+        <div class="frame frame-desktop"></div>
+        <figcaption class="device-label">Desktop — 1024px and up</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="brand-bar glass">
+      <a class="brand" href="index.html" aria-label="CourseHub — home">
+        <svg class="brand-mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" rx="9" fill="#A47864"/>
+          <path d="M9 12.5 16 9l7 3.5-7 3.5-7-3.5Z" fill="#F2F0EA"/>
+          <path d="M11.5 15.6v3.2c0 1.2 2 2.7 4.5 2.7s4.5-1.5 4.5-2.7v-3.2l-4.5 2.2-4.5-2.2Z" fill="#F2F0EA" opacity=".85"/>
+        </svg>
+        <span class="brand-name">CourseHub</span>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Theme: system. Activate to switch theme.">
+        <svg class="icon icon-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="10" cy="10" r="3.2"/><path d="M10 1.8v2.4M10 15.8v2.4M1.8 10h2.4M15.8 10h2.4M4.2 4.2l1.7 1.7M14.1 14.1l1.7 1.7M15.8 4.2l-1.7 1.7M5.9 14.1l-1.7 1.7"/>
+        </svg>
+        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" hidden>
+          <circle cx="10" cy="10" r="4"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M15.7 4.3l-1.4 1.4M5.7 14.3l-1.4 1.4"/>
+        </svg>
+        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+          <path d="M16.5 12.5A7 7 0 1 1 7.5 3.5a5.6 5.6 0 0 0 9 9Z"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="main-nav glass" aria-label="Primary">
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="capsule" aria-hidden="true"></span>
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 10 4l7 6.5"/><path d="M5.5 9.5V16h9V9.5"/></svg>
+            <span class="nav-label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="courses.html">
+            <span class="capsule" aria-hidden="true"></span>
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="11" y="3" width="6" height="6" rx="1.5"/><rect x="3" y="11" width="6" height="6" rx="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5"/></svg>
+            <span class="nav-label">Courses</span>
+          </a>
+        </li>
+        <li>
+          <a href="blueprint.html" aria-current="page">
+            <span class="capsule" aria-hidden="true"></span>
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16 12 4l4 4-8 8H4v-0Z"/><path d="M10.5 5.5l4 4"/></svg>
+            <span class="nav-label">Blueprint</span>
+          </a>
+        </li>
+        <li>
+          <a href="audit.html">
+            <span class="capsule" aria-hidden="true"></span>
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13a6 6 0 1 1 12 0"/><path d="M10 13l3.5-3.5"/><path d="M4 17h12"/></svg>
+            <span class="nav-label">Audit</span>
+          </a>
+        </li>
+        <li>
+          <a href="join.html">
+            <span class="capsule" aria-hidden="true"></span>
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="10" rx="2"/><path d="m4 7 6 4 6-4"/></svg>
+            <span class="nav-label">Join</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <div class="page-head">
+        <p class="eyebrow">The design process</p>
+        <h1>Blueprint</h1>
+        <p class="lede">Every pixel on this site was decided here first — discovery, wireframes, semantics, style, logic and audit. This page documents the kit's roadmap as it was actually followed.</p>
+        <div class="toggle-row">
+          <button class="btn btn-ghost btn-small" type="button" id="landmarks-toggle" aria-pressed="false">Show landmarks</button>
+          <button class="btn btn-ghost btn-small" type="button" id="grayscale-toggle" aria-pressed="false">Grayscale test</button>
+        </div>
+      </div>
+
+      <!-- DISCOVERY -->
+      <section class="section" aria-labelledby="discovery-title">
+        <h2 id="discovery-title" class="section-title">1 · Discovery</h2>
+        <article class="glass card">
+          <h3>How might we…</h3>
+          <p class="hmw">How might we help a busy learner choose the right course in under 30 seconds on a phone?</p>
+        </article>
+        <div class="two-col">
+          <article class="glass card">
+            <h3>Persona — Sara, 21</h3>
+            <p>Final-year CS student in Karachi. Studies between lectures on a mid-range Android phone with patchy mobile data. Skims instead of reading; decides from level match, time cost and proof of outcome. Leaves pages that make her wait or think too hard.</p>
+          </article>
+          <article class="glass card">
+            <h3>Empathy map</h3>
+            <div class="empathy">
+              <div class="empathy-cell"><h4>Says</h4><p>"Just tell me which course is for me."</p></div>
+              <div class="empathy-cell"><h4>Thinks</h4><p>"Is this too advanced for me? Will it load on my data?"</p></div>
+              <div class="empathy-cell"><h4>Does</h4><p>Skims cards, saves interesting ones, compares durations, abandons slow pages.</p></div>
+              <div class="empathy-cell"><h4>Feels</h4><p>Overwhelmed by choice; relieved when filtering is instant.</p></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- WIREFRAME -->
+      <section class="section" aria-labelledby="wireframe-title">
+        <h2 id="wireframe-title" class="section-title">2 · Wireframe</h2>
+        <p>Grayscale boxes, mobile-first. If the hierarchy reads without colour, colour can only improve it.</p>
+        <h3 class="subhead">Home</h3>
+        <div class="wire-row">
+          <figure class="wireframe">
+            <figcaption>Mobile · 375px</figcaption>
+            <div class="wf wf-mobile" aria-hidden="true">
+              <span class="wf-nav"></span><span class="wf-hero"></span><span class="wf-line w80"></span>
+              <span class="wf-btn"></span><span class="wf-block"></span><span class="wf-block"></span><span class="wf-block"></span>
+            </div>
+          </figure>
+          <figure class="wireframe">
+            <figcaption>Tablet · 768px</figcaption>
+            <div class="wf wf-tablet" aria-hidden="true">
+              <span class="wf-nav"></span><span class="wf-hero"></span><span class="wf-line w60"></span>
+              <span class="wf-btn"></span><span class="wf-cols"><i></i><i></i></span><span class="wf-block"></span>
+            </div>
+          </figure>
+          <figure class="wireframe">
+            <figcaption>Desktop · 1024px</figcaption>
+            <div class="wf wf-desktop" aria-hidden="true">
+              <span class="wf-nav"></span><span class="wf-hero-split"><i></i><i></i></span>
+              <span class="wf-cols"><i></i><i></i><i></i></span><span class="wf-cols"><i></i><i></i><i></i></span>
+            </div>
+          </figure>
+        </div>
+        <h3 class="subhead">Courses</h3>
+        <div class="wire-row">
+          <figure class="wireframe">
+            <figcaption>Mobile · 375px</figcaption>
+            <div class="wf wf-mobile" aria-hidden="true">
+              <span class="wf-nav"></span><span class="wf-line w50"></span><span class="wf-filter"></span>
+              <span class="wf-block"></span><span class="wf-block"></span><span class="wf-block"></span>
+            </div>
+          </figure>
+          <figure class="wireframe">
+            <figcaption>Tablet · 768px</figcaption>
+            <div class="wf wf-tablet" aria-hidden="true">
+              <span class="wf-nav"></span><span class="wf-line w50"></span><span class="wf-filter"></span>
+              <span class="wf-cols"><i></i><i></i></span><span class="wf-cols"><i></i><i></i></span>
+            </div>
+          </figure>
+          <figure class="wireframe">
+            <figcaption>Desktop · 1024px</figcaption>
+            <div class="wf wf-desktop" aria-hidden="true">
+              <span class="wf-nav"></span>
+              <span class="wf-split-side"><i class="wf-side"></i><i class="wf-main"><b></b><b></b><b></b></i></span>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- SEMANTICS -->
+      <section class="section" aria-labelledby="semantics-title">
+        <h2 id="semantics-title" class="section-title">3 · Semantics</h2>
+        <p>Landmarks give screen readers and AI a table of contents. Toggle <strong>Show landmarks</strong> above to outline this page's <code>header</code>, <code>nav</code>, <code>main</code>, <code>article</code> and <code>footer</code> with labels.</p>
+        <article class="glass card">
+          <h3>Landmark map</h3>
+          <ul class="check-list">
+            <li>One <code>h1</code> per page; headings never skip a level</li>
+            <li><code>header</code> → <code>nav aria-label="Primary"</code> → <code>main#main</code> → <code>footer</code></li>
+            <li>Course cards and benefits are <code>article</code>; filters live in an <code>aside</code></li>
+            <li>Skip link, <code>lang="en"</code>, descriptive <code>alt</code> / <code>aria-label</code> on every visual</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- STYLE -->
+      <section class="section" aria-labelledby="style-title">
+        <h2 id="style-title" class="section-title">4 · Style</h2>
+        <h3 class="subhead">Palette — measured WCAG ratios</h3>
+        <div class="swatches">
+          <figure class="swatch">
+            <span class="sw-color" style="background:#F2F0EA"></span>
+            <figcaption><strong>Moonlit Grey</strong><br>#F2F0EA · base surface</figcaption>
+          </figure>
+          <figure class="swatch">
+            <span class="sw-color" style="background:#A47864"></span>
+            <figcaption><strong>Mocha Mousse</strong><br>#A47864 · surfaces &amp; accents · 3.38:1 as text — decorative only</figcaption>
+          </figure>
+          <figure class="swatch">
+            <span class="sw-color" style="background:#7A5648"></span>
+            <figcaption><strong>Mocha Ink</strong><br>#7A5648 · secondary text · <strong>5.67:1</strong> on Moonlit — AA</figcaption>
+          </figure>
+          <figure class="swatch">
+            <span class="sw-color" style="background:#A0D4E0"></span>
+            <figcaption><strong>Ethereal Blue</strong><br>#A0D4E0 · surfaces &amp; accents · <strong>11.20:1</strong> on Espresso Night — AAA</figcaption>
+          </figure>
+          <figure class="swatch">
+            <span class="sw-color" style="background:#2B1F19"></span>
+            <figcaption><strong>Espresso</strong><br>#2B1F19 · body text · <strong>14.04:1</strong> on Moonlit — AAA</figcaption>
+          </figure>
+          <figure class="swatch">
+            <span class="sw-color" style="background:#1D140F"></span>
+            <figcaption><strong>Espresso Night</strong><br>#1D140F · dark surface · Moonlit on it: <strong>15.90:1</strong> — AAA</figcaption>
+          </figure>
+        </div>
+        <h3 class="subhead">Type specimen</h3>
+        <article class="glass card type-specimen">
+          <p class="spec-h">Montserrat 700 — Headlines that hold the page</p>
+          <p class="spec-h2">Montserrat 600 — Section titles and card headings</p>
+          <p class="spec-b">Open Sans 400 — Body copy. Warm, readable, and quiet enough to let the ideas speak. The quick brown fox jumps over the lazy dog 0123456789.</p>
+          <p class="spec-b spec-strong">Open Sans 600 — Emphasis, labels and buttons.</p>
+          <p class="spec-note">Two families, three weights, fluid with clamp(). Fallback stacks carry size-adjust metrics so the layout never jumps while fonts load.</p>
+        </article>
+      </section>
+
+      <!-- LOGIC -->
+      <section class="section" aria-labelledby="logic-title">
+        <h2 id="logic-title" class="section-title">5 · Logic</h2>
+        <article class="glass card">
+          <h3>Interactions (vanilla JS, one namespace: <code>CourseHub</code>)</h3>
+          <ul class="check-list">
+            <li>Theme toggle — system / light / dark, persisted in localStorage</li>
+            <li>Pointer-following specular highlight on glass cards and nav (rAF, fine pointers only)</li>
+            <li>Breakpoint watcher — matchMedia at 768px/1024px highlights the matching device frame in the background</li>
+            <li>Courses — search, level chips, duration, sort; re-renders wrapped in startViewTransition; save toggles persisted</li>
+            <li>Course details in a native <code>&lt;dialog&gt;</code> with focus return</li>
+            <li>Join form — Constraint Validation API, inline errors, error summary with focus management</li>
+            <li>Home — count-up stats on IntersectionObserver; featured courses rendered from data.js</li>
+            <li>Glass toasts for save actions; nav pill condenses on scroll via sentinel observer</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- AUDIT -->
+      <section class="section" aria-labelledby="audit-link-title">
+        <h2 id="audit-link-title" class="section-title">6 · Audit</h2>
+        <article class="glass card">
+          <h3>Prove it, don't promise it</h3>
+          <p>The Audit page measures this very site live — LCP and CLS via PerformanceObserver, plus DOM checks for landmarks, headings, alt text, labels and overflow.</p>
+          <a class="btn btn-primary" href="audit.html">Open the live audit</a>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="blueprint.html">Blueprint</a></li>
+        <li><a href="audit.html">Audit</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+    <p>Built by Asim - DecodeLabs Industrial Training Kit - Batch 2026</p>
+  </footer>
+
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="liquid" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/blueprint.js" defer></script>
+</body>
+</html>

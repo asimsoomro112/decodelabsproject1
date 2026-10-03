@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CourseHub logo">
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#A47864"/>
+  <path d="M18 25 32 18l14 7-14 7-14-7Z" fill="#F2F0EA"/>
+  <path d="M23 31.2v6.4c0 2.4 4 5.4 9 5.4s9-3 9-5.4v-6.4l-9 4.4-9-4.4Z" fill="#F2F0EA" opacity=".85"/>
+  <rect x="42" y="28" width="4" height="14" rx="2" fill="#F2F0EA" opacity=".85"/>
+  <circle cx="44" cy="45" r="2.6" fill="#F2F0EA" opacity=".85"/>
+</svg>

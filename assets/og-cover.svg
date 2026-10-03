@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="CourseHub — Learn what's next, anywhere.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2F0EA"/>
+      <stop offset="1" stop-color="#E9E2D6"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#A47864" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A47864" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#A0D4E0" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#A0D4E0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="180" cy="120" r="320" fill="url(#blobA)"/>
+  <circle cx="1050" cy="520" r="360" fill="url(#blobB)"/>
+  <circle cx="980" cy="120" r="200" fill="url(#blobA)" opacity="0.5"/>
+  <!-- device trio -->
+  <g opacity="0.9">
+    <rect x="880" y="180" width="220" height="150" rx="18" fill="#F2F0EA" stroke="#2B1F19" stroke-width="6"/>
+    <rect x="902" y="202" width="176" height="84" rx="8" fill="#A47864" opacity="0.75"/>
+    <rect x="902" y="296" width="80" height="12" rx="6" fill="#2B1F19" opacity="0.25"/>
+    <rect x="990" y="296" width="80" height="12" rx="6" fill="#2B1F19" opacity="0.25"/>
+    <rect x="810" y="230" width="96" height="140" rx="14" fill="#F2F0EA" stroke="#2B1F19" stroke-width="6"/>
+    <rect x="822" y="246" width="72" height="52" rx="6" fill="#A0D4E0" opacity="0.9"/>
+    <rect x="822" y="308" width="72" height="10" rx="5" fill="#2B1F19" opacity="0.25"/>
+    <rect x="822" y="326" width="48" height="10" rx="5" fill="#2B1F19" opacity="0.2"/>
+    <rect x="742" y="280" width="60" height="118" rx="16" fill="#F2F0EA" stroke="#2B1F19" stroke-width="5"/>
+    <rect x="751" y="294" width="42" height="60" rx="5" fill="#A47864" opacity="0.7"/>
+    <rect x="751" y="362" width="42" height="9" rx="4.5" fill="#A0D4E0"/>
+  </g>
+  <!-- wordmark -->
+  <g font-family="Montserrat, Arial, sans-serif">
+    <rect x="96" y="150" width="104" height="104" rx="28" fill="#A47864"/>
+    <path d="M122 178 148 164l26 14-26 14-26-14Z" fill="#F2F0EA"/>
+    <path d="M130 190v12c0 4.5 8 10 18 10s18-5.5 18-10v-12l-18 8.5-18-8.5Z" fill="#F2F0EA" opacity=".85"/>
+    <text x="224" y="228" font-size="64" font-weight="700" fill="#2B1F19">CourseHub</text>
+  </g>
+  <text x="100" y="330" font-family="Montserrat, Arial, sans-serif" font-size="72" font-weight="700" fill="#2B1F19">Learn what&#8217;s next,</text>
+  <text x="100" y="412" font-family="Montserrat, Arial, sans-serif" font-size="72" font-weight="700" fill="#7A5648">anywhere.</text>
+  <text x="100" y="478" font-family="Arial, sans-serif" font-size="30" fill="#2B1F19" opacity="0.75">Pure HTML · CSS · vanilla JavaScript — no frameworks.</text>
+  <text x="100" y="560" font-family="Arial, sans-serif" font-size="24" letter-spacing="4" fill="#7A5648">DECODELABS INDUSTRIAL TRAINING KIT — BATCH 2026</text>
+</svg>
